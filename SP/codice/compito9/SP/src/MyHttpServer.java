@@ -8,7 +8,7 @@ import java.net.Socket;
 
 public class MyHttpServer {
 	
-	public static final String WEB_ROOT = "C:/Temp/WebContent";
+	public static final String WEB_ROOT = "C:\\Users\\akrom\\OneDrive\\Desktop\\uni\\SP\\codice\\compito9\\SP"; //"C:/Temp/WebContent";
 	private static final String SHUTDOWN_COMMAND = "/SHUTDOWN";
 	private boolean shutdown = false;
 	public static void  main(String[] args) {

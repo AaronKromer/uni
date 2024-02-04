@@ -1,5 +1,5 @@
 import java.util.Hashtable;
-
+import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServlet;
 
 public class ServletHashTable {
