@@ -39,7 +39,9 @@ public class ManagementConsole extends Thread {
 			System.out.println("Servlet " + servletInternalName + " removed");
 		}
 	}
-
+	void executeList(){
+		ServletHashTable.listElements();
+	}
 	void executeLoad(String servletInternalName){
 		if (ServletHashTable.contains(servletInternalName)) {
 			System.out.println("Servlet " + servletInternalName + " already in the servlet repository");
@@ -110,6 +112,10 @@ public class ManagementConsole extends Thread {
 		}
 		if (firstWord(command).equals("unload")) {
 			executeUnload(secondWord(command));
+			return;
+		}
+		if (firstWord(command).equals("list")) {
+			executeList(secondWord(command));
 			return;
 		}
 		if (firstWord(command).equals("quit")) {

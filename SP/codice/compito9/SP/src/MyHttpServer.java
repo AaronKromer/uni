@@ -15,6 +15,7 @@ public class MyHttpServer {
 		MyHttpServer server = new MyHttpServer();
 		System.out.println("Web Root = " + WEB_ROOT);
 		ManagementConsole managementConsole = new ManagementConsole();
+		ServletHashTable servletHashTable = new ServletHashTable();
 		managementConsole.start();
 		server.await();
 	}
