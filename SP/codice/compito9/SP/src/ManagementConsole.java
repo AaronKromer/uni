@@ -115,7 +115,7 @@ public class ManagementConsole extends Thread {
 			return;
 		}
 		if (firstWord(command).equals("list")) {
-			executeList(secondWord(command));
+			executeList();
 			return;
 		}
 		if (firstWord(command).equals("quit")) {

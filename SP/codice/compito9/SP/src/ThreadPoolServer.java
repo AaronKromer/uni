@@ -15,7 +15,7 @@ class ThreadPoolServer{
 
 	void handleRequest(Request request, Response response, int sleepTime) {
 		if (request.getUri() != null) {
-			if (request.getUri().startsWith("/servlet")) {
+			if (request.getUri().startsWith("/servletrepository")) {
 				MyServletProcessor processor = new MyServletProcessor();
 				processor.process(request, response);
 			}
