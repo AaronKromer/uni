@@ -21,7 +21,9 @@ public class ServletHashTable {
 	}
 	static void listElements() {
 		Enumeration<String> keys = ht.keys();
+		System.out.println(keys);
 		while (keys.hasMoreElements()) {
+			System.out.println("welaaaa2");
 			String key = keys.nextElement();
 			HttpServlet value = ht.get(key);
 			System.out.println("Servlet: " + key + ", Class: " + value);

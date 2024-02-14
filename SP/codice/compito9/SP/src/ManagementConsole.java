@@ -41,15 +41,16 @@ public class ManagementConsole extends Thread {
 	}
 	void executeList(){
 		ServletHashTable.listElements();
+		System.out.println("dsa");
 	}
 	void executeLoad(String servletInternalName){
 		if (ServletHashTable.contains(servletInternalName)) {
 			System.out.println("Servlet " + servletInternalName + " already in the servlet repository");
 		} else {
 			String servletClassName = null;
-			String servletRepository = new String(MyHttpServer.WEB_ROOT + File.separator + "servletrepository" + File.separator).trim();
+			String servletRepository = new String(MyHttpServer.WEB_ROOT + File.separator + "servletrepository").trim();
 			String servletDir = new String(servletRepository + File.separator+ servletInternalName).trim();
-			File f = new File(servletDir );
+			File f = new File(servletDir);
 			if (!(f.exists() && f.isDirectory())) {
 				System.out.println("Directory " + servletDir + " does not exists");
 				return; 
@@ -122,7 +123,7 @@ public class ManagementConsole extends Thread {
 			return;
 		}
 		System.out.print("Command unknown: ");
-		System.out.println("Commands supported: load <servlet> unload <servlet> quit");
+		System.out.println("Commands supported: load <servlet> unload <servlet> list quit");
 	}
 	
 	public void run() {
