@@ -30,7 +30,7 @@ public class Response implements HttpServletResponse {
 		String headerHttpAfterLength = "\r\n" + "\r\n";
 		try {
 			String fileName = MyHttpServer.WEB_ROOT+request.getUri();
-			FileReader fileReader = new FileReader(fileName);
+			FileReader fileReader = new FileReader(fileName.trim());
 			BufferedReader bufferedReader = new BufferedReader(fileReader);
 			String line;
 			StringBuilder stringBuilder = new StringBuilder();

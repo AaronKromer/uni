@@ -48,16 +48,13 @@ public class Request implements HttpServletRequest {
 		byte[] buffer = new byte[2048];
 		try {
 			i = input.read(buffer);
+			for (int j=0; j<i; j++) {
+				request.append((char) buffer[j]);
+			}
+			uri = parseUri(request.toString());
+		} catch (Exception e) {
+			uri=null;
 		}
-		catch (IOException e) {
-			e.printStackTrace();
-			i = -1;
-		}
-		for (int j=0; j<i; j++) {
-			request.append((char) buffer[j]);
-		}
-	//	System.out.print(request.toString());
-		uri = parseUri(request.toString());
 	}
 
 	public Object getAttribute(String attribute) {

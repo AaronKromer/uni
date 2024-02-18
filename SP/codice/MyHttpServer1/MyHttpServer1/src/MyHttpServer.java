@@ -12,7 +12,7 @@ import java.util.Hashtable;
 import javax.servlet.http.HttpServlet;
 
 public class MyHttpServer {
-	public static final String WEB_ROOT = "	C:/Temp/WebContent";
+	public static final String WEB_ROOT = "C:\\Users\\akrom\\OneDrive\\Desktop\\uni\\SP\\codice\\compito9\\SP";
 
 	public static void  main(String[] args) {
 		ServletHashTable servletHashTable = new ServletHashTable();

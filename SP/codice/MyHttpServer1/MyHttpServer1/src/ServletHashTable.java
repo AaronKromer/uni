@@ -1,4 +1,5 @@
 import java.util.Hashtable;
+import java.util.Enumeration;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServlet;
 
@@ -20,10 +21,11 @@ public class ServletHashTable {
 		ht.remove(s);
 	}
 	static void listElements() {
-	Enumeration<String> keys = ht.keys();
-	while (keys.hasMoreElements()) {
-		String key = keys.nextElement();
-		HttpServlet value = ht.get(key);
-		System.out.println("Servlet: " + key + ", Class: " + value);
+		Enumeration<String> keys = ht.keys();
+		while (keys.hasMoreElements()) {
+			String key = keys.nextElement();
+			HttpServlet value = ht.get(key);
+			System.out.println("Servlet: " + key + ", Class: " + value);
+		}
 	}
 }
